@@ -1,0 +1,36 @@
+.main {
+    margin: 142px 10px 10px;
+    padding: 15px;
+    border: solid 0.01px rgb(255, 209, 188);
+}
+
+.product-image {
+    width: 200px;
+    height:250px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.product-infos{
+    font-style: italic;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 15px;
+    text-align: center;
+}
+
+.product-container {
+    border: solid 0.01px rgb(255, 209, 188);
+    overflow: hidden;
+    padding: 3px;
+}
+.add-to-cart-btn{
+    border-radius: 5px;
+    border: none;
+    background-color:bisque;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.menu-bar {
+    position: fixed;
+    top: 97px;
+    right: 10px;
+    left: 10px;
+    height: 35px;
+    /*color: rgb(250, 229, 215);*/
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 0.01px rgb(255, 209, 188);
+    height: 35px;
+    background-image: linear-gradient(to left, rgb(245, 173, 139),rgb(243, 189, 164), rgb(255, 238, 224))
+}

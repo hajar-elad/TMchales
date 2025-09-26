@@ -1,0 +1,79 @@
+.main {
+    margin: 142px 10px 10px;
+    padding: 15px;
+    border: solid 0.01px rgb(255, 209, 188);
+}
+
+.nbrOfItemsBox{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: x-large;
+    font-style: italic;
+}
+
+.grids-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+}
+
+.products-container,
+.payment-summary {
+    padding: 12px;
+    border: solid 0.01px rgb(248, 182, 151);
+}
+
+.product-container{
+    display: flex;
+    column-gap: 25px;
+    align-items: center; 
+}
+
+.Product-infos{
+ flex: 1;
+}
+
+.product-image {
+    width: 140px;
+    height:170px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.payment-summary {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+}
+
+.payment-summary-title{
+  font-style: italic;
+  font-size: x-large;
+  margin-bottom: 10px;
+} 
+
+.total-products,
+.shipping-total,
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.place-order-button, .remove-item {
+    margin-top: 12px;
+    width: 150px;
+    height: 35px;
+    text-wrap: nowrap;
+     border-radius: 5px;
+    border: none;
+    background-color:rgb(255, 199, 166);
+    cursor: pointer;
+    font-style: italic;
+}
+
+.remove-item{
+
+}
+

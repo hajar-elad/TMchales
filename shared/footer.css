@@ -1,0 +1,36 @@
+.footer {
+    margin-top: 12px;
+    margin: 10px 10px 10px;
+    border: solid 0.01px rgb(255, 209, 188);
+     display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.contact{
+   display: flex;
+   flex-direction: column;
+   row-gap: 5px;
+   align-items: center;
+   padding: 10px 0px 2px 15px;
+   
+   
+}
+
+.copyright{
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.contact-text{
+text-decoration: solid;
+text-decoration: underline;
+}
+
+.contact-number, .contact-mail{
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+.phone-icon, .mail-icon{
+    width: 30px;
+}
