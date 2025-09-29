@@ -67,13 +67,10 @@
     height: 35px;
     text-wrap: nowrap;
      border-radius: 5px;
-    border: none;
-    background-color:rgb(255, 199, 166);
+    border: 1px solid rgb(240, 168, 135);
+    background-color:rgb(253, 200, 169);
     cursor: pointer;
     font-style: italic;
 }
 
-.remove-item{
-
-}
 

@@ -22,7 +22,7 @@ function listCartItems(){
                     <img class="product-image" src="${product.image}">
                     <div class="Product-infos">
                         <div class="product-name">${product.name}</div>
-                        <div class="product-price">${product.price} DHS</div>
+                        <div class="product-price">${(product.price).toFixed(2)} DHS</div>
                         <div class="quantity">Quantité: ${cartItem.quantity}</div>
                     </div>
                     <button class="remove-item js-remove-item" data-product-id=${product.id}>retirer</button>
@@ -37,11 +37,12 @@ function listCartItems(){
 // Display cart items 
 listCartItems();
 
+let totalCart;
+export let total = 1;
 
-function renderPayementSummary(){
+  function renderPayementSummary(){
 
   let html = ''
-  let totalCart = 0
   const totalProducts = cartPTotal();
   console.log(totalProducts)
   let shippingFees = totalProducts >= 280 ? 0 : 30;
@@ -66,7 +67,7 @@ function renderPayementSummary(){
                     <div class="total-cart">${totalCart.toFixed(2)} DHS</div>
                 </div>
 
-                <button class="place-order-button"> Valider La Commande </button>`
+                <button class="place-order-button js-place-order-button"> Valider La Commande </button>`
     document.querySelector('.payment-summary')
         .innerHTML = html;
 }
@@ -92,4 +93,11 @@ document.querySelectorAll('.js-remove-item')
           })
 })
 
+function redirectToBilling(){
+    document.querySelector('.js-place-order-button')
+     .addEventListener('click',() => {
+            window.location.href = 'billing.html';
+         })  
+}
         
+redirectToBilling();

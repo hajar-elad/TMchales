@@ -14,7 +14,7 @@ export function getNbrOfItems(){
           .innerHTML = nbrOfItems;
 }
 
-getNbrOfItems();
+// getNbrOfItems();
 
 export function cartPTotal(){
     let totalProducts= 0;
