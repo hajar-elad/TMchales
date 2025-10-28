@@ -1,8 +1,7 @@
-import {products} from '../data/products.js';
-import {cart, removeCartItem, getNbrOfItems, cartPTotal} from './cart.js'; 
+import {products} from '../../data/products.js';
+import {cart, removeCartItem, getNbrOfItems, cartPTotal} from '../cart.js'; 
+import {createModal} from '../chales.js';
 // import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'; //calling external libary ESM version
-
-console.log(cart);
 
 
 /*             Working With Dates From External Library
@@ -12,40 +11,72 @@ console.log(today.format('dddd, MMMM D'));// format will display date in readble
 console.log(today.add(7,'days')); // return date of today + 7 Days
 console.log(today.add(2,'months')); // return date of today + 2 months*/
 
-function listCartItems(){
+function listCartItems(){ 
     let html = '';
+
+    if( cart.length === 0) {
+        html=`<div class="product-container">
+                <div class="empty-bascket-text">Votre Panier Est Vide!</div>
+              </div>`; 
+    }
+    else{
     cart.forEach((cartItem) => { 
 
        products.forEach((product) => {
            if (cartItem.id === product.id){
                html += `<div class="product-container js-product-container-${product.id}">
-                    <img class="product-image" src="${product.image}">
+                    <img class="product-image js-product-image" data-product-id=${product.id} src="${product.image}">
                     <div class="Product-infos">
                         <div class="product-name">${product.name}</div>
                         <div class="product-price">${(product.price).toFixed(2)} DHS</div>
                         <div class="quantity">Quantité: ${cartItem.quantity}</div>
                     </div>
                     <button class="remove-item js-remove-item" data-product-id=${product.id}>retirer</button>
+                    <div class="modal-container-hide js-modal-container-${product.id}">
+                    </div>
                   </div>`
         }})
     })
-    document.querySelector('.products-container')
+    } 
+    document.querySelector('.grid-container')
        .innerHTML = html;
-    getNbrOfItems();
+    
+    document.querySelector('.js-cart-quantity')
+          .innerHTML = getNbrOfItems();
 }
 
-// Display cart items 
+// Display cart items  
 listCartItems();
 
-let totalCart;
-export let total = 1;
+
+function showModal(){
+
+     document.querySelectorAll('.js-product-image')
+      .forEach((image) => {
+         image.addEventListener('click',() => {
+            console.log('ggg');
+           const productId = image.dataset.productId;
+            createModal(productId);
+   
+        const modalContainer = document.querySelector(`.js-modal-container-${productId}`);
+               modalContainer.classList.add('modal-container-show');
+         const closeModal = document.querySelector(`.js-close-modal-${productId}`); 
+         closeModal.addEventListener('click', () => {
+         modalContainer.classList.remove('modal-container-show');})
+    
+           })
+    })
+  }
+
+   showModal();
+
 
   function renderPayementSummary(){
 
-  let html = ''
+  let html = '';
+  let totalCart;
   const totalProducts = cartPTotal();
-  console.log(totalProducts)
-  let shippingFees = totalProducts >= 280 ? 0 : 30;
+  const shippingFees = totalProducts >= 299 ||totalProducts === 0 ? 0 : 30;
 
     totalCart = totalProducts + shippingFees;
     html = `<div class="payment-summary-title">
@@ -70,6 +101,13 @@ export let total = 1;
                 <button class="place-order-button js-place-order-button"> Valider La Commande </button>`
     document.querySelector('.payment-summary')
         .innerHTML = html;
+        console.log(totalCart);
+     
+    if(totalCart === 0){
+        let button = document.querySelector('.place-order-button');
+        button.disabled =true;
+        button.style.color = "black";
+    }    
 }
 
 //Display Payment Summary
@@ -89,7 +127,8 @@ document.querySelectorAll('.js-remove-item')
           document.querySelector(`.js-product-container-${productId}`).remove();
 
           renderPayementSummary();
-          getNbrOfItems();
+          document.querySelector('.js-cart-quantity')
+          .innerHTML = getNbrOfItems();
           })
 })
 

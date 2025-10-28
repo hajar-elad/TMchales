@@ -1,9 +1,6 @@
 .main {
-    margin: 142px 10px 10px;
-    border: solid 0.01px rgb(255, 209, 188);
     padding: 32px;
     padding-top: 21px;
-    min-height: 380px;
 }
 
 .grids-container {
@@ -16,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 17px;
-}
+} 
 
 .billing,
 .payement,
@@ -66,6 +63,15 @@ input {
     gap: 12px;
 }
 
+@media (max-width: 750px) {
+
+    .recap-cart {
+       display: none;
+        /* this says when the page is at 750px or less show only 2 products pr row */
+    }
+
+}
+
 .cart-items {
     display: flex;
     column-gap: 10px;
@@ -99,4 +105,8 @@ input {
 
 .submitted-image {
     height: 250px;
+}
+
+.submitted-text{
+text-wrap: nowrap;
 }

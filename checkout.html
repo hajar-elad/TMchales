@@ -4,10 +4,10 @@
 <head>
     <title>TM-chales CheckOut</title>
 
-    
-    <script type="module" src="scripts/checkout.js" defer></script>
-   
-    
+
+    <script type="module" src="scripts/checkout/checkout.js" defer></script>
+
+
 
 
     <!-- This code is needed for responsive design to work.
@@ -23,8 +23,9 @@
     <!-- Here are the CSS files for this page. -->
     <link rel="stylesheet" href="shared/header.css">
     <link rel="stylesheet" href="shared/general.css">
-    <link rel="stylesheet" href="styles/checkout.css">
     <link rel="stylesheet" href="shared/menuBar.css">
+    <link rel="stylesheet" href="shared/modals.css">
+    <link rel="stylesheet" href="styles/checkout.css">
     <link rel="stylesheet" href="shared/footer.css">
 </head>
 
@@ -32,20 +33,20 @@
 
     <div class="header">
         <div class="header-left-section">
-            <a href="home.html" class="header-link">
+            <a href="index.html" class="header-link">
                 <img class="logo" src="images/logo.png">
             </a>
-            <div class="welcome-banner">
+            <div class="brand-name-container">
                 <div class="brand-name">TM </div>
                 <div class="brand-name-suite">chales </div>
             </div>
         </div>
 
         <div class="header-middle-section">
-            <input class="search-bar" type="text" placeholder="Search">
+            <!--<input class="search-bar" type="text" placeholder="Search">
             <button class="searchButton">
                 <img class="searchIcon" src="images/icons/searchIcon.png">
-            </button>
+            </button>-->
         </div>
 
         <div class="header-right-section">
@@ -54,51 +55,29 @@
                 <img class="cartIcon" src="images/icons/cartIcon.png">
                 <div class="cart-quantity"></div>-->
             </a>
-        </div> 
+        </div>
     </div>
 
     <div class="menu-bar">
-    <a href="home.html">Acceuil</a>
-    <a href="jerseyChales.html">Chales Jersey</a>
-    <a href="chalesAMotifs.html">Chales A Motifs</a>
-    <a href="foulardsAMotifs.html">Foulard A Motifs</a>
+        <a href="index.html" class="home-link">Acceuil</a>
+        <a href="jerseyChales.html">Chales Jersey</a>
+        <a href="chalesAMotifs.html">Chales A Motifs</a>
+        <a href="foulardsAMotifs.html">Foulard A Motifs</a>
     </div>
 
     <div class="main">
         <div class="nbrOfItemsBox">
             <div class="js-cart-quantity"></div>
-            <div class="items"> -Produits</div>
+            <div class="items"> -Produit(s)</div>
         </div>
         <div class="grids-container">
-            
-            <div class="products-container"> 
+            <div class="grid-container">
             </div>
             <div class="payment-summary">
-                <div class="payment-summary-title">
-                    Recapitulatif Commande:
-                </div>
-
-                <div class="total-products">
-                    <div>Total Produits :</div>
-                    <div class="total-products-money">200.00 DHS</div>
-                </div>
-
-                <div class="shipping-total">
-                    <div>Frais De Livraison :</div>
-                    <div class="shipping-fees">30.00 DHS</div>
-                </div>
-
-                <div class="total-amount">
-                    <div>Montant Total :</div>
-                    <div class="total-cart">230.00 DHS</div>
-                </div>
-
-                <button class="place-order-button"> Valider La Commande </button>
-
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer"> 
         <div class="contact">
             <div class="contact-text">Contactez-nous</div>
             <div class="contact-number">

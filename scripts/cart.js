@@ -10,11 +10,10 @@ export function getNbrOfItems(){
     cart.forEach((cartItem) =>{
        nbrOfItems += cartItem.quantity;
     })
-    document.querySelector('.js-cart-quantity')
-          .innerHTML = nbrOfItems;
+    if(!nbrOfItems){nbrOfItems = '';}
+    return nbrOfItems 
 }
 
-// getNbrOfItems();
 
 export function cartPTotal(){
     let totalProducts= 0;
@@ -80,6 +79,5 @@ export function addToCart(productId, category){
          })
           cart = newCart;
           localStorage.setItem('cart', JSON.stringify(cart));
-          console.log(cart);
           
     }

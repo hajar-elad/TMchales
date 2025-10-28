@@ -4,7 +4,7 @@
 <head>
   <title>TM-Chales</title>
 
-  <script type="module" src="scripts/cart.js" defer></script>
+  <script type="module" src="scripts/index.js" defer></script>
 
 
   <!-- This code is needed for responsive design to work.
@@ -12,15 +12,11 @@
       smaller screen sizes like a phone or a tablet). -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Load a font called Roboto from Google Fonts. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Here are the CSS files for this page. -->
   <link rel="stylesheet" href="shared/header.css">
   <link rel="stylesheet" href="shared/general.css">
-  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="shared/menuBar.css">
   <link rel="stylesheet" href="shared/footer.css">
 </head>
@@ -29,24 +25,25 @@
 
   <div class="header">
     <div class="header-left-section">
-      <a href="home.html" class="header-link">
+      <a href="index.html" class="header-link">
         <img class="logo" src="images/logo.png">
       </a>
-      <div class="welcome-banner">
+      <div class="brand-name-container">
         <div class="brand-name">TM </div>
         <div class="brand-name-suite">chales </div>
       </div>
     </div>
 
     <div class="header-middle-section">
-      <input class="search-bar" type="text" placeholder="Search">
+      <!--<input class="search-bar" type="text" placeholder="Search">
       <button class="searchButton">
         <img class="searchIcon" src="images/icons/searchIcon.png">
-      </button>
+      </button>-->
+      <div class="free-delivery-banner">Livraison Gratuite A <span class="price-free-delivery">299 DHS</span>! </div>
     </div>
 
     <div class="header-right-section">
-      <div>Cart</div>
+      <div class="title-cart">Cart</div>
       <a class="cart-link" href="checkout.html">
         <img class="cartIcon" src="images/icons/cartIcon.png">
         <div class="cart-quantity js-cart-quantity"></div>
@@ -55,7 +52,7 @@
   </div>
 
   <div class="menu-bar">
-    <a href="home.html">Acceuil</a>
+    <a href="index.html" class="home-link">Acceuil</a>
     <a href="jerseyChales.html">Chales Jersey</a>
     <a href="chalesAMotifs.html">Chales A Motifs</a>
     <a href="foulardsAMotifs.html">Foulard A Motifs</a>
@@ -65,7 +62,7 @@
     <div class="category-grid">
       <div class="category-container">
         <a class="category-link" href="jerseyChales.html" data-category="jerseyChales"><img class="category-img" src="images/jersey/jerseyScarfs.webp"></a>
-        <div class="image-title">Jersey Lycra</div>
+        <div class="image-title">Jersey Lycra</div> 
       </div>
       <div class="category-container">
         <a class="category-link" href="chalesAMotifs.html" data-category="chalesAMotifs"><img class="category-img" src="images/printedSilk/printedSilkScarfs.webp"></a>

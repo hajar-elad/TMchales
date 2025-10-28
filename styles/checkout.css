@@ -1,10 +1,4 @@
-.main {
-    margin: 142px 10px 10px;
-    padding: 15px;
-    border: solid 0.01px rgb(255, 209, 188);
-}
-
-.nbrOfItemsBox{
+.nbrOfItemsBox {
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
@@ -18,27 +12,43 @@
     column-gap: 10px;
 }
 
-.products-container,
+@media (max-width: 750px) {
+
+    .grids-container {
+        grid-template-columns: 1fr;
+        /* this says when the page is at 750px or less show only 2 products pr row */
+    }
+
+}
+
+.grid-container,
 .payment-summary {
     padding: 12px;
     border: solid 0.01px rgb(248, 182, 151);
 }
 
-.product-container{
+.product-container {
     display: flex;
     column-gap: 25px;
-    align-items: center; 
+    align-items: center;
+    justify-content: center;
 }
 
-.Product-infos{
- flex: 1;
-}
+.Product-infos {
+    flex: 1;
+}   
 
 .product-image {
     width: 140px;
-    height:170px;
+    height: 170px;
     border-radius: 10px;
     padding: 3px;
+    cursor: pointer;
+}
+
+.empty-bascket-text {
+    font-size: x-large;
+    font-style: italic;
 }
 
 .payment-summary {
@@ -48,11 +58,11 @@
     text-align: center;
 }
 
-.payment-summary-title{
-  font-style: italic;
-  font-size: x-large;
-  margin-bottom: 10px;
-} 
+.payment-summary-title {
+    font-style: italic;
+    font-size: x-large;
+    margin-bottom: 10px;
+}
 
 .total-products,
 .shipping-total,
@@ -61,16 +71,15 @@
     justify-content: space-between;
 }
 
-.place-order-button, .remove-item {
+.place-order-button,
+.remove-item {
     margin-top: 12px;
     width: 150px;
     height: 35px;
     text-wrap: nowrap;
-     border-radius: 5px;
+    border-radius: 5px;
     border: 1px solid rgb(240, 168, 135);
-    background-color:rgb(253, 200, 169);
+    background-color: rgb(253, 200, 169);
     cursor: pointer;
     font-style: italic;
 }
-
-

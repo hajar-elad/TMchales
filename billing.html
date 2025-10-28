@@ -3,11 +3,9 @@
 
 <head>
     <title>TM-chales CheckOut</title>
-
+ 
     
-    <script type="module" src="scripts/billing.js" defer></script>
-   
-    
+    <script type="module" src="scripts/checkout/billing.js" defer></script>
 
 
     <!-- This code is needed for responsive design to work.
@@ -15,37 +13,33 @@
       smaller screen sizes like a phone or a tablet). -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
     <!-- Here are the CSS files for this page. -->
     <link rel="stylesheet" href="shared/header.css">
     <link rel="stylesheet" href="shared/general.css">
     <link rel="stylesheet" href="styles/billing.css">
     <link rel="stylesheet" href="shared/menuBar.css">
+    <link rel="stylesheet" href="shared/modals.css">
     <link rel="stylesheet" href="shared/footer.css">
 </head>
 
 <body>
-
+ 
     <div class="header">
         <div class="header-left-section">
-            <a href="home.html" class="header-link">
+            <a href="index.html" class="header-link">
                 <img class="logo" src="images/logo.png">
             </a>
-            <div class="welcome-banner">
+            <div class="brand-name-container">
                 <div class="brand-name">TM </div>
                 <div class="brand-name-suite">chales </div>
             </div>
         </div>
 
         <div class="header-middle-section">
-            <input class="search-bar" type="text" placeholder="Search">
+           <!-- <input class="search-bar" type="text" placeholder="Search">
             <button class="searchButton">
                 <img class="searchIcon" src="images/icons/searchIcon.png">
-            </button>
+            </button>-->
         </div>
 
         <div class="header-right-section">
@@ -58,7 +52,7 @@
     </div>
 
     <div class="menu-bar">
-    <a href="home.html">Acceuil</a>
+    <a href="index.html" class="home-link">Acceuil</a>
     <a href="jerseyChales.html">Chales Jersey</a>
     <a href="chalesAMotifs.html">Chales A Motifs</a>
     <a href="foulardsAMotifs.html">Foulard A Motifs</a>
@@ -71,35 +65,37 @@
             <div class="items"> -Produits</div>
         </div>-->
         <div class="grids-container">
-            <form class="billing-infos">
+            <form action="order-sent.html" method="GET" class="billing-infos">
                 <div class="email">
                     <label>Contact:</label>
-                    <input type="email" class="email-input" placeholder="Adresse E-mail" required> 
+                    <input type="email" class="email js-email" placeholder="Adresse E-mail" required> 
                 </div>
                 <div class="billing">
                     <label class="bTitle">Livraison:</label>
                     <div class="name">
-                        <input type="text" class="f-name" placeholder="Nom" required>  
-                        <input type="text" class="L-name" placeholder="Prenom"> 
+                        <input type="text" class="f-name js-l-name" placeholder="Nom" required>  
+                        <input type="text" class="l-name js-f-name" placeholder="Prenom" required> 
                     </div>
-                    <input type="text" class="adress" placeholder="Adresse"> 
-                    <input type="text" class="city" placeholder="ville"> 
-                    <input type="text" class="postal-code" placeholder="Code Postal"> 
-                    <input type="text" class="phone" placeholder="Telephone">
-                    
+                    <input type="text" class="adress js-adress" placeholder="Adresse" required> 
+                    <input type="text" class="city js-city" placeholder="ville" required> 
+                    <input type="text" class="postal-code js-postal-code" placeholder="Code Postal" required> 
+                    <input type="text" class="number js-number" placeholder="Telephone" required>
+                     
                 </div>
                 <div class="payement">
-                    <label>Payement:</label>
-                    <input type="text" class="mode-payment" value="Payement A La Livraison"> 
+                    <label>Mode De Payement:</label>
+                    <input type="text" class="mode-payment" value="Payement A La Livraison" readonly> 
                 </div>
                 <div class="billing-adress">
                     <label>Adresse De Facturation:</label>
-                    <input type="text" class="billing-adress" placeholder="Adresse De Facturation"> 
+                    <input type="text" class="billing-adress" placeholder="Adresse De Facturation" required> 
                 </div>
-                <button class="submit-button js-submit-button">Valider</button>
+                <button type="submit" class="submit-button js-submit-button">Valider</button>
             </form>
             <div class="recap-cart">
-                <div class="cart-items"></div>
+                <div class="cart-items">
+                      
+                </div>
                 <div class="payment-summary">render payement</div>
             </div>
             
