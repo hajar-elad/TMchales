@@ -31,7 +31,6 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    flex-wrap: wrap;
 }
 
 .brand-name {
@@ -49,6 +48,7 @@
 }
 
 .header-middle-section {
+    padding: 7px;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -84,10 +84,6 @@
 
     .free-delivery-banner {
         font-size: 100%;
-    }
-
-    .brand-name-container {
-        display: none;
     }
 
 }

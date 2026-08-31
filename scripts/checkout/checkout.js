@@ -31,7 +31,8 @@ function listCartItems(){
                         <div class="product-price">${(product.price).toFixed(2)} DHS</div>
                         <div class="quantity">Quantité: ${cartItem.quantity}</div>
                     </div>
-                    <button class="remove-item js-remove-item" data-product-id=${product.id}>retirer</button>
+                    <button class="remove-item js-remove-item" data-product-id=${product.id} title= "Retirer Le Produit">
+                    -</button>
                     <div class="modal-container-hide js-modal-container-${product.id}">
                     </div>
                   </div>`

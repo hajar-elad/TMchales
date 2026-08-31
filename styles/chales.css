@@ -29,6 +29,13 @@
     .grid-container {
         grid-template-columns: 1fr;
     }
+
+    @media (max-width: 750px) {
+
+        .brand-name-container {
+            display: none;
+        }
+    }
 }
 
 @media (min-width: 550px) and (max-width: 750px) {
@@ -36,6 +43,13 @@
     .grid-container {
         grid-template-columns: 1fr 1fr;
         /* this says when the page is at 750px or less show only 2 products pr row */
+    }
+
+    @media (max-width: 750px) {
+
+        .brand-name-container {
+            display: none;
+        }
     }
 
 }
@@ -55,7 +69,7 @@
     }
 }
 
-.product-container { 
+.product-container {
     padding: 3px;
 }
 

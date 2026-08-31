@@ -2,7 +2,7 @@ const order = JSON.parse(localStorage.getItem('order'));
 
     if(!order){
       alert('Votre Panier Est Vide');
-      window.location.href = 'index.html';
+      //window.location.href = 'index.html';
     }
     else {
       const html = 

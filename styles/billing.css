@@ -70,6 +70,11 @@ input {
         /* this says when the page is at 750px or less show only 2 products pr row */
     }
 
+    .submitted{
+        flex-direction: column;
+        gap: 20px;
+    }
+
 }
 
 .cart-items {

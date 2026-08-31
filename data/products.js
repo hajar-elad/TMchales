@@ -58,47 +58,40 @@
 
 
      {
-        id : 'chalesAMotifs-1',
-        category : 'chalesAMotifs',
-        name : 'Chales A Motifs - Printed Autumn',
-        image : 'images/printedSilk/printedAutumn.jpg',
+        id : 'chalesSilks-1',
+        category : 'chalesSilks',
+        name : 'Chales Silks - Silk Autumn',
+        image : 'images/silkChale/silkAutumn.jpg',
         price : 120.00,
     },
     {
-       id : 'chalesAMotifs-2',
-       category : 'chalesAMotifs',
-        name : 'Chales A Motifs - Printed Black',
-        image : 'images/printedSilk/printedBlack.webp',
+       id : 'chalesSilks-2',
+       category : 'chalesSilks',
+        name : 'Chales Silks - Silk Cream',
+        image : 'images/silkChale/silkCream.jpg',
         price : 120.00,
     },
     {
-        id : 'chalesAMotifs-3',
-        category : 'chalesAMotifs',
-        name : 'Chales A Motifs - Printed Dual',
-        image : 'images/printedSilk/printedDual.jpeg',
+        id : 'chalesSilks-3',
+        category : 'chalesSilks',
+        name : 'Chales Silks - Silk Pink',
+        image : 'images/silkChale/silkPink.jpg',
         price : 120.00,
     },
      
      
      {
-        id : 'chalesAMotifs-4',
-        category : 'chalesAMotifs',
-        name : 'Chales A Motifs - Printed Leopard',
-        image : 'images/printedSilk/printedLeopard.jpg',
+        id : 'chalesSilks-4',
+        category : 'chalesSilks',
+        name : 'Chales Silks - Silk Luxury',
+        image : 'images/silkChale/silkLuxury.jpg',
         price : 120.00,
     },
      {
-        id : 'chalesAMotifs-5',
-        category : 'chalesAMotifs',
-        name : 'Chales A Motifs - Printed Luxury',
-        image : 'images/printedSilk/printedLuxury.webp',
-        price : 120.00,
-    },
-    {
-       id : 'chalesAMotifs-6',
-       category : 'chalesAMotifs',
-        name : 'Chales A Motifs - Printed Orange',
-        image : 'images/printedSilk/printedOrange.jpg',
+        id : 'chalesSilks-5',
+        category : 'chalesSilks',
+        name : 'Chales Silks - Silk Violet',
+        image : 'images/silkChale/silkViolet.jpg',
         price : 120.00,
     },
 
@@ -106,22 +99,22 @@
        {
         id : 'foulardsAMotifs-1',
         category : 'foulardsAMotifs',
-        name : 'Foulards A Motifs - Foulard Amazon',
-        image : 'images/silkSquare/squareAmazom.jpg',
+        name : 'Foulards A Motifs - Foulard Red Rose',
+        image : 'images/silkSquare/squareRedRose.png',
         price : 120.00,
     },
     {
         id : 'foulardsAMotifs-2',
         category : 'foulardsAMotifs',
         name : 'Foulards A Motifs - Foulard Automn',
-        image : 'images/silkSquare/squareAutumn.jpg',
+        image : 'images/silkSquare/squareAutumn.png',
         price : 120.00,
     },
     {
         id : 'foulardsAMotifs-3',
         category : 'foulardsAMotifs',
-        name : 'Foulards A Motifs - Foulard Black',
-        image : 'images/silkSquare/squareBlack.jpg',
+        name : 'Foulards A Motifs - Foulard Pink Rose',
+        image : 'images/silkSquare/squarePinkRose.png',
         price : 120.00,
     },
      
@@ -130,30 +123,17 @@
         id : 'foulardsAMotifs-4',
         category : 'foulardsAMotifs',
         name : 'Foulards A Motifs - Foulard Blue',
-        image : 'images/silkSquare/squareBlue.jpg',
+        image : 'images/silkSquare/squareBlue.png',
         price : 120.00,
     },
      {
         id : 'foulardsAMotifs-5',
         category : 'foulardsAMotifs',
         name : 'Foulards A Motifs - Foulard Dual',
-        image : 'images/silkSquare/squareDual.jpg',
-        price : 120.00,
-    },
-    {
-        id : 'foulardsAMotifs-6',
-        category : 'foulardsAMotifs',
-        name : 'Foulards A Motifs - Foulard Pink',
-        image : 'images/silkSquare/squarePink.jpg',
-        price : 120.00,
-    },
-    {
-        id : 'foulardsAMotifs-7',
-        category : 'foulardsAMotifs',
-        name : 'Foulards A Motifs - Foulard White',
-        image : 'images/silkSquare/squareWhite.jpg',
+        image : 'images/silkSquare/squareDual.png',
         price : 120.00,
     }
+
 ].map((productDetails) => {
     return new Product(productDetails);
 })
